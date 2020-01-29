@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML 2 Slide</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <h2>Digitale Präsentation in wenigen Schritten generieren</h2>
+      <div class="multi-step-checkout-process">
+        <div class="multi-step-checkout-process-step">
+          <ul class="accordion" data-accordion>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">1. Basisdaten <span class="multi-step-checkout-step-title-subheader">Schritt 1 von 2</span></a>
+              <div class="accordion-content" data-tab-content>
+                <form class="multi-step-checkout-form">
+                  <div class="row">
+                    <div class="small-12 medium-9 column">
+                      <div class="multi-step-checkout-shipping-options multi-step-checkout-step-section">
+                        <h6 class="multi-step-checkout-step-subheader">Präsentationsart</h6>
+
+                        <div class="row multi-step-checkout-shipping-option">
+                          <label>
+                            <div class="small-10 column">
+                              <input type="radio" name="multi-step-checkout-shipping-option" value="ups-ground-shipping" class="multi-step-checkout-shipping-option-selection" checked="checked"> <span class="multi-step-checkout-shipping-option-title">Web-Ausgabe</span>
+                              <div class="multi-step-checkout-shipping-option-desc">Generierung einer XML-Datei, dient als Grundlage</div>
+                            </div>
+                          </label>
+                        </div>
+
+                        <div class="row multi-step-checkout-shipping-option">
+                          <label>
+                            <div class="small-10 column">
+                              <input type="radio" name="multi-step-checkout-shipping-option" value="usps-shipping" class="multi-step-checkout-shipping-option-selection"><span class="multi-step-checkout-shipping-option-title">PDF</span>
+                              <div class="multi-step-checkout-shipping-option-desc">Generierung einer XML- und PDF-Datei</div>
+                            </div>
+                          </label>
+                        </div>
+
+                      </div>
+                      <div class="shipping-address multi-step-checkout-step-section">
+                        <h6 class="multi-step-checkout-step-subheader">Autor-Daten</h6>
+                        <p class="multi-step-checkout-step-subdesc">Bitte hinterlegen Sie eine E-Mail-Adresse auf die Sie Ihre Ergebnisse zu geschickt bekommen möchten.</p>
+                        <label>
+                          <input type="text" placeholder="Vorname" required >
+                          <input type="text" placeholder="Nachname" required >
+                          <div><hr class="multi-step-checkout-form-divider"></div>
+                          <input type="email" placeholder="E-Mail" required >
+                        </label>
+                      </div>
+                      <button class="primary button expanded">Weiter zum Aufbau der Präsentation</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="accordion-item is-active" data-accordion-item>
+              <a href="#" class="accordion-title">2. Folien <span class="multi-step-checkout-step-title-subheader">Schritt 2 von 2</span></a>
+              <div class="accordion-content" data-tab-content>
+              <hr class="show-for-small-only order-table-divider">
+                <table class="order-table-content stack">
+					<thead>
+						<tr>
+							<th width="120">Optionen</th>
+							<th width="400">Inhalt</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="order-item">
+							<td>
+								<input type="color" id="bgcolor" value="#FFFFFF">
+								<p class="help-text" id="passwordHelpText">Hintergrund</p>
+								
+								<input type="color" id="textcolor" value="#000000">
+								<p class="help-text" id="passwordHelpText">Textfarbe</p>
+								
+								<label>Übergang
+								<select>
+									<option value="husker">Husker</option>
+									<option value="starbuck">Starbuck</option>
+									<option value="hotdog">Hot Dog</option>
+									<option value="apollo">Apollo</option>
+								</select></label>
+							</td>
+							<td>
+								<span class="order-product-title">Product 1</span> <span class="order-product-vendor">Vendor 1</span>
+								<ul class="order-product-info">
+									<li>In Stock</li>
+									<li>Product SKU: 12345</li>
+									<li>A great Product</li>
+									<li>Details: You won't be sad</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+                </table>
+
+                  <div><hr class="multi-step-checkout-form-divider"></div>
+
+                  <form>
+                    <button class="primary button expanded">Generieren</button>
+                  </form>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
