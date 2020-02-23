@@ -43,3 +43,9 @@ $(".folientabelle").on("click", "#removeslide", function() {
 	}
 	return false;
 });
+
+$("form").on("submit", function () {
+	$(".ql-editor").each(function() {
+		$("form").append('<textarea name="folieninhalt[]">'+$(this).html()+'</textarea>');
+	});
+});
