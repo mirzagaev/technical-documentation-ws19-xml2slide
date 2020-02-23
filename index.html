@@ -21,7 +21,7 @@
             <li class="accordion-item" data-accordion-item>
               <a href="#" class="accordion-title">1. Basisdaten <span class="multi-step-checkout-step-title-subheader">Schritt 1 von 2</span></a>
               <div class="accordion-content" data-tab-content>
-                <form class="multi-step-checkout-form">
+                <form class="multi-step-checkout-form" action="build.php" method="POST">
                   <div class="row">
                     <div class="small-12 medium-9 column">
                       <div class="multi-step-checkout-shipping-options multi-step-checkout-step-section">
@@ -30,7 +30,8 @@
                         <div class="row multi-step-checkout-shipping-option">
                           <label>
                             <div class="small-10 column">
-                              <input type="radio" name="multi-step-checkout-shipping-option" value="ups-ground-shipping" class="multi-step-checkout-shipping-option-selection" checked="checked"> <span class="multi-step-checkout-shipping-option-title">Web-Ausgabe</span>
+                              <input type="radio" name="preziart" value="web" class="multi-step-checkout-shipping-option-selection" checked="checked">
+                              <span class="multi-step-checkout-shipping-option-title">Web-Ausgabe</span>
                               <div class="multi-step-checkout-shipping-option-desc">Generierung einer XML-Datei, dient als Grundlage</div>
                             </div>
                           </label>
@@ -39,7 +40,7 @@
                         <div class="row multi-step-checkout-shipping-option">
                           <label>
                             <div class="small-10 column">
-                              <input type="radio" name="multi-step-checkout-shipping-option" value="usps-shipping" class="multi-step-checkout-shipping-option-selection"><span class="multi-step-checkout-shipping-option-title">PDF</span>
+                              <input type="radio" name="preziart" value="pdf" class="multi-step-checkout-shipping-option-selection"><span class="multi-step-checkout-shipping-option-title">PDF</span>
                               <div class="multi-step-checkout-shipping-option-desc">Generierung einer XML- und PDF-Datei</div>
                             </div>
                           </label>
@@ -56,21 +57,20 @@
                           <input type="email" placeholder="E-Mail" required >
                         </label>
                       </div>
-                      <button class="primary button expanded">Weiter zum Aufbau der Präsentation</button>
                     </div>
                   </div>
                 </form>
               </div>
             </li>
-            <li class="accordion-item is-active" data-accordion-item>
+            <li class="accordion-item is-active" id="mainaccordion" data-accordion-item>
               <a href="#" class="accordion-title">2. Folien <span class="multi-step-checkout-step-title-subheader">Schritt 2 von 2</span></a>
               <div class="accordion-content" data-tab-content>
               <hr class="show-for-small-only order-table-divider">
                 <table class="order-table-content stack folientabelle">
 					<thead>
 						<tr>
-							<th width="120">Optionen</th>
-							<th width="400">Inhalt</th>
+							<th width="120">OPTIONEN</th>
+							<th width="400">FOLIEN</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -82,38 +82,33 @@
 								<input type="color" id="textcolor" value="#000000">
 								<p class="help-text" id="passwordHelpText">Textfarbe</p>
 								
-								<label>Übergang
-								<select id="transition">
-									<option value="none">none</option>
-									<option value="fade">fade</option>
-									<option value="slide">slide</option>
-									<option value="convex">convex</option>
-									<option value="concave">concave</option>
-									<option value="zoom">zoom</option>
-								</select></label>
+								<label>Übergang zur nächsten Folie
+  								<select id="transition">
+  									<option value="none">none</option>
+  									<option value="fade">fade</option>
+  									<option value="slide">slide</option>
+  									<option value="convex">convex</option>
+  									<option value="concave">concave</option>
+  									<option value="zoom">zoom</option>
+  								</select>
+                </label>
+
+                <button type="button" id="duplicateslide" class="success button">Folie duplizieren</button>
+                <button type="button" id="removeslide" class="alert button">Folie löschen</button>
 							</td>
 							<td>
-								<div id="editor">
-									<h1>Folientitel</h1>
-									<ul class="order-product-info">
-										<li>Unterpunkt 1</li>
-										<li>Unterpunkt 2</li>
-										<li>Unterpunkt 3</li>
-										<li>Unterpunkt 4</li>
-									</ul>
-								</div>
-								<button type="button" id="duplicateslide" class="success button">Folie duplizieren</button>
+								<div id="editor" class="editors"></div>
 							</td>
 						</tr>
 					</tbody>
                 </table>
 
-				<button type="button" class="success button">leere Folie hinzufügen</button>
+				  <button type="button" id="btnaddnewslide" class="success button">leere Folie hinzufügen</button>
 
                   <div><hr class="multi-step-checkout-form-divider"></div>
 
                   <form>
-                    <button class="primary button expanded">Generieren</button>
+                    <button class="primary button expanded">GENERIEREN</button>
                   </form>
                 </div>
 

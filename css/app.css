@@ -1,5 +1,25 @@
+BODY {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
   font-size: 1em;
+}
+
+.grid-container {
+  max-width: 90rem;
+}
+thead th, thead td,
+tbody th, tbody td {
+    padding: 1rem;
+}
+.button {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+.button.success {
+  background-color: #a6e22e;
 }
 
 .multi-step-checkout-process-step {
@@ -18,7 +38,6 @@ h1 {
   font-size: 1.25rem;
   transition: color 0.5s ease;
   border: none;
-  font-family: 'Droid serif', serif;
 }
 
 .multi-step-checkout-process .accordion-title:hover, .multi-step-checkout-process .accordion-title:active, .multi-step-checkout-process .accordion-title:focus {
@@ -69,14 +88,12 @@ h1 {
   font-size: 0.9rem;
   display: inline-block;
   margin-left: 10px;
-  font-family: 'Open sans', serif;
 }
 
 .multi-step-checkout-step-subheader {
   color: #3e3e3e;
   font-size: 0.9rem;
   font-weight: 600;
-  font-family: 'Open sans', sans-serif;
 }
 
 .multi-step-checkout-step-subdesc {

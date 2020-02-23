@@ -22,8 +22,24 @@ var quill = new Quill('#editor', {
 	theme: 'snow'
 });
 
+// ADD NEW SLIDE
+$("#btnaddnewslide").on('click', function(){
+	let first_TR = $(".folientabelle tbody tr:first").closest("tr").clone();
+	$(".folientabelle tbody").append(first_TR);
+	return false;
+});
+
+// DUPLICATE SLIDE
 $(".folientabelle").on("click", "#duplicateslide", function() {
 	let current_TR = $(this).closest("tr").clone();
 	$(".folientabelle tbody").append(current_TR);
+	return false;
+});
+
+// DELETE SLIDE
+$(".folientabelle").on("click", "#removeslide", function() {
+	if ( confirm("Sicher löschen?") ) {
+		$(this).closest("tr").remove();
+	}
 	return false;
 });
