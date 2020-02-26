@@ -33,6 +33,7 @@ $("#btnaddnewslide").on('click', function(){
 	sampleTR.find("#editor_").attr("id","editor_"+rowCount);
 	$(".folientabelle tbody").append(sampleTR);
 	initializeEditor("editor_"+rowCount);
+	$(".hiddentextareas").remove();
 	return false;
 });
 

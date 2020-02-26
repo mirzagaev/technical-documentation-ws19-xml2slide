@@ -1,16 +1,14 @@
 <?php
-$file = "xml/CONTENT.xml";
-//$file = "xml/sample.xml";
+$file = "xml/".$_GET["f"];
+//$file = "xml/xml2slide__1582732221.xml";
 $xml = simplexml_load_file($file) or die("Error: Cannot read file");
 
 $document_bgColor = $xml['bgColor'];
 $document_type = $xml['type'];
-$document_controller = $xml['controller'];
 
 $document_title = $xml->title;
 $document_author = $xml->author;
 $document_createdate = $xml->createdate;
-$document_publicdate = $xml->publicdate;
 ?>
 <!doctype html>
 <html>

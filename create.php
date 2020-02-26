@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="ltr">
+<html class="no-js" lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -16,7 +16,7 @@
     <div class="grid-container">
       <h1 class="h1">Daten eingeben und Folien beschriften</h1>
       <div class="xml2slide-process">
-          <form class="xml2slide-form" action="convert2xml.php" method="POST">
+          <form class="xml2slide-form" action="create_progress.php" method="POST" target="_blank">
             <ul class="accordion" data-accordion>
               <li class="accordion-item is-active" data-accordion-item>
                 <a href="#" class="accordion-title">1. Basisdaten <span class="xml2slide-step-title-subheader">Schritt 1 von 2</span></a>
@@ -76,8 +76,9 @@
             <tbody>
               <tr class="">
                 <td>
-                  <input type="color" id="bgcolor" name="bgcolor[]" value="#FFFFFF">
-                  <p class="help-text" id="passwordHelpText">Hintergrund</p>
+                  <label>Hintergrundfarbe
+                    <input type="color" id="bgcolor" name="bgcolor[]" value="#FFFFFF">
+                  </label>
                   
                   <label>Übergang zur nächsten Folie
                     <select id="transition" name="transition[]">
@@ -117,8 +118,9 @@
             <table id="hiddentbl">
             <tr id="hiddensamplefolie">
                 <td>
-                  <input type="color" id="bgcolor" name="bgcolor[]" value="#FFFFFF">
-                  <p class="help-text" id="passwordHelpText">Hintergrund</p>
+                  <label>Hintergrundfarbe
+                    <input type="color" id="bgcolor" name="bgcolor[]" value="#FFFFFF">
+                  </label>
                   
                   <label>Übergang zur nächsten Folie
                     <select id="transition" name="transition[]">

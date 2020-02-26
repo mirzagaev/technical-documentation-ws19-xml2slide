@@ -7,7 +7,6 @@
     <title>XML 2 Slide</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-    <link href="css/quill.snow.css" rel="stylesheet">
   </head>
   <body>
     <div class="grid-container">
@@ -17,23 +16,38 @@
           <div class="callout secondary">
             <h5>Quelldatei in XML-Format</h5>
             <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            <a class="button" href="/create.php">Create Slide</a>
+            <a class="button" href="/create.php">Create new Slide</a>
           </div>
         </div>
         <div class="large-6 columns">
           <div class="callout success">
             <h5>This is a secondary callout</h5>
             <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            <a class="button" href="/open.php">Open your XML file</a>
+            <a class="button" href="/open.php">Edit existing XML file</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/quill.js"></script>
-    <script src="js/app.js"></script>
+      <h3 class="h3 center">Letzte Präsentationen</h3>
+      <table>
+        <tbody>
+        <?php
+          $fileList = glob('xml/*');
+
+          //Loop through the array that glob returned.
+          foreach($fileList as $file){
+            $file = explode("/",$file);
+            //Simply print them out onto the screen.
+            echo "<tr>
+                  <td>".$file[1]."</td>
+                  <td><a class='tiny button' href='open.php?f=".$file[1]."' target='_blank'>ansehen</a></td>
+                  <td><a class='tiny success button' href='create.php?f=".$file[1]."' target='_blank'>bearbeiten</a></td>
+                  <td><a class='tiny alert button' href='delete.php?f=".$file[1]."'>löschen</a></td>
+                </tr>";
+          }
+        ?>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
