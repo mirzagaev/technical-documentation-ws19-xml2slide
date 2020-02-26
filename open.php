@@ -24,7 +24,7 @@ $document_createdate = $xml->createdate;
 		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+		<link rel="stylesheet" href="css/monokai.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -201,10 +201,10 @@ $document_createdate = $xml->createdate;
 				// The display mode that will be used to show slides
 				display: 'block',
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'js/plugin/markdown/marked.js' },
+					{ src: 'js/plugin/markdown/markdown.js' },
+					{ src: 'js/plugin/notes/notes.js', async: true },
+					{ src: 'js/plugin/highlight/highlight.js', async: true }
 				]
 			});
 		</script>

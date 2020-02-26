@@ -44,7 +44,7 @@ $(".folientabelle").on("click", "#duplicateslide", function() {
 	return false;
 });
 
-// DELETE SLIDE
+// FOLIE LÖSCHEN
 $(".folientabelle").on("click", "#removeslide", function() {
 	if ( confirm("Sicher löschen?") ) {
 		$(this).closest("tr").remove();
