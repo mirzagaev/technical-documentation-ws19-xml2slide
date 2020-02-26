@@ -36,7 +36,11 @@ if (isset($_POST)) {
 
 	$xml->asXML($filepath);
 
-	header("Location: open.php?f=".$filename);
+	if ( $type == "html" ) {
+		header("Location: open.php?f=".$filename);
+	} else {
+		header("Location: open.php?print-pdf&f=".$filename);
+	}
 	exit();
 }
 ?>

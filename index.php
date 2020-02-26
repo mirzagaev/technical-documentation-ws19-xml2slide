@@ -10,20 +10,28 @@
   </head>
   <body>
     <div class="grid-container">
-      <h1 class="h1">Digitale Präsentation in wenigen Schritten generieren</h1>
       <div class="row">
         <div class="large-6 columns">
           <div class="callout secondary">
-            <h5>Quelldatei in XML-Format</h5>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            <a class="button" href="/create.php">Create new Slide</a>
+            <h2 class="h2">Digitale Präsentation in wenigen Schritten generieren</h2>
+            <p>Erstelle jetzt online mit wenigen Schritten eine webbasierte oder PDF-fähige Präsentation.</p>
+            <a class="button" href="create.php">Neue Präsentation starten</a>
           </div>
         </div>
+
         <div class="large-6 columns">
-          <div class="callout success">
-            <h5>This is a secondary callout</h5>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            <a class="button" href="/open.php">Edit existing XML file</a>
+          <div class="callout warning">
+            <h4 class="h4">PDF-Export Anleitung (getestet in Google Chrome)</h4>
+              <ol>
+                <li>Präsentation im Browser aufrufen</li>
+                <li>Drucken-Dialog aufrufen (CTRL/CMD+P).</li>
+                <li><strong>Ziel</strong> zu <strong>"Als PDF speichern"</strong> anpassen.</li>
+                <li><strong>Layout</strong> zum <strong>Querformat</strong> wechseln.</li>
+                <li>Unter weiteren Einstellungen <strong>Ränder</strong> deaktivieren.</li>
+                <li><strong>Hintergrundgrafiken</strong> aktivieren.</li>
+                <li><strong>Speichern</strong> klicken.</li>
+              </ol>
+            <a class="button" href="create.php">Neue Präsentation starten</a>
           </div>
         </div>
       </div>
@@ -39,11 +47,12 @@
             $file = explode("/",$file);
             //Simply print them out onto the screen.
             echo "<tr>
-                  <td>".$file[1]."</td>
-                  <td><a class='tiny button' href='open.php?f=".$file[1]."' target='_blank'>ansehen</a></td>
-                  <td><a class='tiny button' href='download.php?f=".$file[1]."' target='_blank'>download</a></td>
-                  <td><a class='tiny success button' href='create.php?f=".$file[1]."' target='_blank'>bearbeiten</a></td>
-                  <td><a class='tiny alert button' href='delete.php?f=".$file[1]."'>löschen</a></td>
+                  <td><strong>".$file[1]."</strong></td>
+                  <td><a class='tiny button' href='open.php?f=".$file[1]."' target='_blank'>WEB-Ansicht</a></td>
+                  <td><a class='tiny button' href='open.php?print-pdf&f=".$file[1]."' target='_blank'>PDF-Ansicht</a></td>
+                  <td><a class='tiny button' href='download.php?f=".$file[1]."' target='_blank'>download xml</a></td>
+                  <td><a class='tiny success button' disabled target='_blank'>bearbeiten</a></td>
+                  <td><a class='tiny alert button deletexmlstructure' href='delete.php?f=".$file[1]."'>löschen</a></td>
                 </tr>";
           }
         ?>

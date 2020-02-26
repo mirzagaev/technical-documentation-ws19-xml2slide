@@ -14,7 +14,11 @@
   </head>
   <body>
     <div class="grid-container">
-      <h1 class="h1">Daten eingeben und Folien beschriften</h1>
+      <div class="callout secondary  ">
+        <h2 class="h2">Daten eingeben und Folien beschriften</h1>
+        <p>Die Felder <strong>Tital, Vorname und Nachname</strong> gehören zu den Pflichtfeldern.</p>
+        <a class="button" href="index.php">Zurück zur Startseite</a>
+      </div>
       <div class="xml2slide-process">
           <form class="xml2slide-form" action="create_progress.php" method="POST" target="_blank">
             <ul class="accordion" data-accordion>
@@ -53,8 +57,8 @@
                           <h6 class="xml2slide-step-subheader">Autor-Daten</h6>
                           <p class="xml2slide-step-subdesc">Bitte hinterlegen Sie eine E-Mail-Adresse auf die Sie Ihre Ergebnisse zu geschickt bekommen möchten.</p>
                           <label>
-                            <input type="text" placeholder="Vorname" name="vorname" />
-                            <input type="text" placeholder="Nachname" name="nachname" />
+                            <input type="text" placeholder="Vorname" name="vorname" required />
+                            <input type="text" placeholder="Nachname" name="nachname" required />
                             <div><hr class="xml2slide-form-divider"></div>
                             <input type="email" placeholder="E-Mail" name="email" />
                           </label>
@@ -104,7 +108,7 @@
                     <div><hr class="xml2slide-form-divider"></div>
 
                     <div class="callout secondary">
-                      <p><strong>Das Klicken auf "Generieren" erzeugt eine XML-Datei, welche auf dem Server gespeichert wird und über die <a href="index.php" target="_blank">Startseite</a> zum Herunterladen angeboten wird. Zudem wird im neuen Tag die Präsentation aufgerufen.</strong></p>
+                      <p><strong>Das Klicken auf "Generieren" erzeugt eine XML-Datei, welche auf dem Server gespeichert wird und über die <a href="index.php" target="_blank">Startseite</a> zum Herunterladen angeboten wird. Anschließend wird im neuen Tab das Ergebnis aufgerufen.</strong></p>
                     </div>
 
                       <input type="submit" class="primary button expanded" id="mainbuttonsubmit" value="GENERIEREN" />
