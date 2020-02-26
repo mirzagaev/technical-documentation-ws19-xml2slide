@@ -41,6 +41,7 @@
             echo "<tr>
                   <td>".$file[1]."</td>
                   <td><a class='tiny button' href='open.php?f=".$file[1]."' target='_blank'>ansehen</a></td>
+                  <td><a class='tiny button' href='download.php?f=".$file[1]."' target='_blank'>download</a></td>
                   <td><a class='tiny success button' href='create.php?f=".$file[1]."' target='_blank'>bearbeiten</a></td>
                   <td><a class='tiny alert button' href='delete.php?f=".$file[1]."'>löschen</a></td>
                 </tr>";

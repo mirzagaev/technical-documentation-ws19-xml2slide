@@ -104,7 +104,7 @@
                     <div><hr class="xml2slide-form-divider"></div>
 
                     <div class="callout secondary">
-                      <p><strong>Das Klicken auf "Generieren" erzeugt eine XML-Datei, welche local zum Herunterladen angeboten wird. Zudem wird im neuen Tag die Präsentation aufgerufen.</strong></p>
+                      <p><strong>Das Klicken auf "Generieren" erzeugt eine XML-Datei, welche auf dem Server gespeichert wird und über die <a href="index.php" target="_blank">Startseite</a> zum Herunterladen angeboten wird. Zudem wird im neuen Tag die Präsentation aufgerufen.</strong></p>
                     </div>
 
                       <input type="submit" class="primary button expanded" id="mainbuttonsubmit" value="GENERIEREN" />

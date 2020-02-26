@@ -35,9 +35,8 @@ if (isset($_POST)) {
 	}
 
 	$xml->asXML($filepath);
-	
-	header('Content-type: text/xml');
-	header('Content-Disposition: attachment; filename="'.$filename.'"');
+
+	header("Location: open.php?f=".$filename);
 	exit();
 }
 ?>
