@@ -1,6 +1,5 @@
 <?php
 if (isset($_POST)) {
-
 	// Variablen definieren
 	$type = $_POST["type"];
 	$titel = $_POST["titel"];
@@ -12,12 +11,14 @@ if (isset($_POST)) {
 	$transition = $_POST["transition"];
 	$folieninhalt = $_POST["folieninhalt"];
 
+	// Dateiname und Pfad definieren
 	$filename = str_replace(" ", "", $titel)."_".$vorname.$nachname.'_'.date("dmY").".xml";
 	$filepath = "xml/".$filename;
 
 	// SimpleXMLElement erstellt ein xml Objekt mit dem ROOT-Element
 	$xml = new SimpleXMLElement('<DOCUMENT/>'); 
 
+	// Dem Tag <DOCUMENT></DOKUMENT> neues Attribut mit Wert vergeben
 	$xml->addAttribute('type', $type);
 
 	// der XML-Struktur neue Tags (mit Werten aus dem Array) hinzufügen
@@ -34,11 +35,15 @@ if (isset($_POST)) {
 	    $page->addChild('content', $folieninhalt[$i]);
 	}
 
+	// XML-Dokument speichern
 	$xml->asXML($filepath);
 
+	// Weiterleitung
 	if ( $type == "html" ) {
+		// zur normalen Webansicht
 		header("Location: open.php?f=".$filename);
 	} else {
+		// zur PDF-Webansicht, Parameter "print-pdf"
 		header("Location: open.php?print-pdf&f=".$filename);
 	}
 	exit();
