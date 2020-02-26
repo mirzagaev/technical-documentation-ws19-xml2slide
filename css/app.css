@@ -4,14 +4,27 @@ BODY {
 
 h1 {
   font-size: 1em;
+  padding: 1em 0;
+  text-align: center;
 }
-
+.large-6.columns {
+  float: left;
+  width: 50%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+}
 .grid-container {
   max-width: 90rem;
 }
 thead th, thead td,
 tbody th, tbody td {
-    padding: 1rem;
+  padding: 1rem;
+}
+table#hiddentbl tr#hiddensamplefolie {
+  display: none;
+}
+.hiddentextareas {
+  display: none;
 }
 .button {
   text-transform: uppercase;

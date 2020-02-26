@@ -15,17 +15,24 @@ var toolbarOptions = [
 	['clean']                                         // remove formatting button
 ];
 
-var quill = new Quill('#editor', {
-	modules: {
-		toolbar: toolbarOptions
-	},
-	theme: 'snow'
-});
+function initializeEditor(editorid) {
+	var quill = new Quill('#'+editorid, {
+		modules: {
+			toolbar: toolbarOptions
+		},
+		theme: 'snow'
+	});
+}
+
+initializeEditor("editor_1");
 
 // ADD NEW SLIDE
 $("#btnaddnewslide").on('click', function(){
-	let first_TR = $(".folientabelle tbody tr:first").closest("tr").clone();
-	$(".folientabelle tbody").append(first_TR);
+	let sampleTR = $("table#hiddentbl tr#hiddensamplefolie").clone();
+	var rowCount = $('table.folientabelle tr').length+1;
+	sampleTR.find("#editor_").attr("id","editor_"+rowCount);
+	$(".folientabelle tbody").append(sampleTR);
+	initializeEditor("editor_"+rowCount);
 	return false;
 });
 
@@ -45,7 +52,7 @@ $(".folientabelle").on("click", "#removeslide", function() {
 });
 
 $("form").on("submit", function () {
-	$(".ql-editor").each(function() {
-		$("form").append('<textarea name="folieninhalt[]">'+$(this).html()+'</textarea>');
+	$("form .ql-editor").each(function() {
+		$("form").append('<textarea class="hiddentextareas" name="folieninhalt[]">'+$(this).html()+'</textarea>');
 	});
 });
