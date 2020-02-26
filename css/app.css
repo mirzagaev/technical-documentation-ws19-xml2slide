@@ -34,102 +34,105 @@ table#hiddentbl tr#hiddensamplefolie {
 .button.success {
   background-color: #a6e22e;
 }
-
-.multi-step-checkout-process-step {
+#mainbuttonsubmit {
+  font-size: 1.2em;
+}
+.xml2slide-process-step {
   margin-top: 20px;
   margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 39.9375em) {
-  .multi-step-checkout-process-step {
+  .xml2slide-process-step {
     padding-right: 0rem;
   }
 }
 
-.multi-step-checkout-process .accordion-title {
+.xml2slide-process .accordion-title {
   color: #3e3e3e;
   font-size: 1.25rem;
   transition: color 0.5s ease;
   border: none;
 }
 
-.multi-step-checkout-process .accordion-title:hover, .multi-step-checkout-process .accordion-title:active, .multi-step-checkout-process .accordion-title:focus {
+.xml2slide-process .accordion-title:hover, .xml2slide-process .accordion-title:active, .xml2slide-process .accordion-title:focus {
   color: #242424;
   transition: color 0.5s ease;
   background: none;
 }
 
-.multi-step-checkout-process :last-child:not(.is-active) > .accordion-title {
+.xml2slide-process :last-child:not(.is-active) > .accordion-title {
   border: none;
 }
 
-.multi-step-checkout-process .accordion-item {
+.xml2slide-process .accordion-item {
   border-bottom: 1px solid #e6e6e6;
   padding-right: 0.8rem;
 }
 
-.multi-step-checkout-process .accordion-item:first-child() {
+.xml2slide-process .accordion-item:first-child() {
   border-top: 1px solid #e6e6e6;
 }
 
-.multi-step-checkout-process .accordion-item.is-active {
+.xml2slide-process .accordion-item.is-active {
   border: 1px solid #e6e6e6;
   border-top: 3px solid #1779ba;
   border-radius: 3px;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
-.multi-step-checkout-process .accordion-item .accordion-title {
+.xml2slide-process .accordion-item .accordion-title {
   font-weight: 400;
 }
 
-.multi-step-checkout-process .accordion-item .accordion-title::before {
+.xml2slide-process .accordion-item .accordion-title::before {
   right: 0.5rem;
 }
 
-.multi-step-checkout-process .accordion-content {
+.xml2slide-process .accordion-content {
   border: none;
   padding-left: 35px;
 }
 
-.multi-step-checkout-process :last-child > .accordion-content:last-child {
+.xml2slide-process :last-child > .accordion-content:last-child {
   border-bottom: none;
 }
 
-.multi-step-checkout-step-title-subheader {
+.xml2slide-step-title-subheader {
   color: #a4a4a4;
   font-size: 0.9rem;
   display: inline-block;
   margin-left: 10px;
 }
 
-.multi-step-checkout-step-subheader {
+.xml2slide-step-subheader {
   color: #3e3e3e;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.multi-step-checkout-step-subdesc {
+.xml2slide-step-subdesc {
   color: #8a8a8a;
   font-size: 0.9rem;
 }
 
-.multi-step-checkout-shipping-option {
+.xml2slide-shipping-option {
   margin-bottom: 10px;
 }
 
-.multi-step-checkout-step-section {
+.xml2slide-step-section {
+  display: grid;
   border-bottom: 1px dashed #e6e6e6;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-.multi-step-checkout-shipping-option-selection {
+.xml2slide-shipping-option-selection {
   position: absolute;
   margin-top: 0.2rem;
 }
 
-.multi-step-checkout-shipping-option-title {
+.xml2slide-shipping-option-title {
   display: block;
   font-size: 0.9rem;
   line-height: 1.4rem;
@@ -137,51 +140,51 @@ table#hiddentbl tr#hiddensamplefolie {
   margin-bottom: 0.8rem;
 }
 
-.multi-step-checkout-shipping-option-desc {
+.xml2slide-shipping-option-desc {
   font-size: 0.9rem;
   color: #8a8a8a;
   margin-left: 25px;
   margin-top: -10px;
 }
 
-.multi-step-checkout-shipping-cost {
+.xml2slide-shipping-cost {
   text-align: right;
 }
 
-.multi-step-checkout-form-divider {
+.xml2slide-form-divider {
   border-bottom: 1px dashed #e6e6e6;
 }
 
-.multi-step-checkout-form input {
+.xml2slide-form input {
   background: #f8f8f8;
 }
 
-.multi-step-checkout-enews-sign-up label {
+.xml2slide-enews-sign-up label {
   position: relative;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.multi-step-checkout-enews-sign-up-checkbox {
+.xml2slide-enews-sign-up-checkbox {
   position: absolute;
   margin-top: 0.4rem;
 }
 
-.multi-step-checkout-credit-card-info label span {
+.xml2slide-credit-card-info label span {
   color: #a4a4a4;
 }
 
-.multi-step-checkout-payment-icons {
+.xml2slide-payment-icons {
   list-style: none;
   margin-left: 0;
   margin-bottom: 1rem;
 }
 
-.multi-step-checkout-payment-icons li {
+.xml2slide-payment-icons li {
   display: inline;
 }
 
-.multi-step-checkout-billing-address .multi-step-checkout-billing-address-list {
+.xml2slide-billing-address .xml2slide-billing-address-list {
   list-style: none;
   margin-left: 1.5rem;
   margin-top: 1rem;
@@ -190,36 +193,36 @@ table#hiddentbl tr#hiddensamplefolie {
   font-size: 0.9rem;
 }
 
-.multi-step-checkout-billing-address .multi-step-checkout-billing-address-checkbox {
+.xml2slide-billing-address .xml2slide-billing-address-checkbox {
   position: absolute;
   margin-top: 0.4rem;
 }
 
-.multi-step-checkout-billing-address label {
+.xml2slide-billing-address label {
   margin-left: 1.5rem;
 }
 
-.multi-step-checkout-create-account {
+.xml2slide-create-account {
   margin-top: 2rem;
 }
 
 @media screen and (max-width: 39.9375em) {
-  .multi-step-checkout-create-account {
+  .xml2slide-create-account {
     margin-top: 0.5rem;
   }
 }
 
-.multi-step-checkout-create-account .create-account-desc {
+.xml2slide-create-account .create-account-desc {
   font-size: 0.9rem;
   color: #8a8a8a;
 }
 
-.multi-step-checkout-logo {
+.xml2slide-logo {
   width: 118px;
   height: 38px;
 }
 
-.multi-step-checkout-arrow {
+.xml2slide-arrow {
   height: 13px;
   width: 13px;
 }

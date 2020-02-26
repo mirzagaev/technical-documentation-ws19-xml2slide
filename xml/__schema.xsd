@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="DOCUMENT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"></xs:element>
+                <xs:element name="author" type="xs:string"></xs:element>
+                <xs:element name="createdate" type="xs:string"></xs:element>
+                <xs:element name="publicdate" type="xs:string"></xs:element>
+                
+                <xs:element ref="page" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:Name" use="required"></xs:attribute>
+            <xs:attribute name="controller" type="xs:Name" use="required"></xs:attribute>
+            <xs:attribute name="bgColor" type="xs:Name" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="page">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"></xs:element>
+                <xs:element name="headline" type="xs:string"></xs:element>
+                <xs:element name="subheadline" type="xs:string"></xs:element>
+                <xs:element name="teaser" type="xs:string"></xs:element>
+                
+                <xs:element ref="list" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="bgColor" type="xs:Name" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:Name" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

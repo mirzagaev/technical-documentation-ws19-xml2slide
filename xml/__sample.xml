@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENT type="html" controller="false" bgColor="#fcfcfc">
+	<title>XML 2 Slide</title>
+	<author>Aydin Mirzaghayev</author>
+	<createdate>16.10.2019</createdate>
+	<publicdate>01.01.2020</publicdate>
+	<email>aydin.mirzagaev@gmx.de</email>
+	<page bgColor="#f4ca12">
+		<title>XML 2 slide</title>
+		<headline>Technical Documentation Software Support (113492a)</headline>
+		<subheadline>Aydin Mirzaghayev (am180)</subheadline>
+		<teaser>Mittels XML-Datenstruktur lässt sich sowohl eine Webanwendung als auch eine PDF-Datei generieren.</teaser>
+	</page>
+	<page bgColor="#1c4ba3">
+		<headline>Gliederung</headline>
+		<teaser>Das Inhaltsverzeichnis des Projektes</teaser>
+		<list type="number">
+			<listitem>Dependencies</listitem>
+			<listitem>Aufbau</listitem>
+			<listitem>Punkt</listitem>
+			<listitem>Punkt</listitem>
+		</list>
+	</page>
+	<page bgColor="#4d7e65">
+		<headline>Figure 1.2. Viewing an XML file in Internet Explorer.</headline>
+		<teaser>The little plus sign next to the first product node indicates that the node has children. Clicking on the plus sign will expand any nodes under that particular node. In this way, you can easily display the parts of the document on which you want to focus.</teaser>
+		<paragraph><bold><îtalic>What is XML?</îtalic></bold></paragraph>
+		<paragraph>There’s one final point about hierarchical trees that you should note. Before, we talked about transforming data into information by adding context. Well, when we start building hierarchies of information that indicate natural relationships (known as taxonomies), we’ve just taken the first giant leap toward turning information into knowledge. That statement itself could spawn a whole other book, so we’ll just have to leave it at that and move on!</paragraph>
+		
+		<list type="cycle">
+			<listitem>Punkt 1</listitem>
+			<listitem>Punkt 2</listitem>
+			<listitem>Punkt 3</listitem>
+		</list>
+	</page>
+	<page bgColor="#b5533c">
+		<headline>Technical Documentation Software Support (113492a)</headline>
+		<subheadline>Aydin Mirzaghayev (am180)</subheadline>
+		<teaser>Präsentationstool, welche mittels XML-Datenstruktur sowohl eine Webanwendung als auch eine PDF-Datei generieren kann.</teaser>
+		<paragraph><bold>Chapter 1. Introduction to XML</bold></paragraph>
+		<paragraph>Who here has heard of XML? Okay, just about everybody. If ever there were a candidate for “Most Hyped Technology” during the late 90s and the current decade, it’s XML (though Java would be a close contender for the title).</paragraph>
+		
+		<code language="html">
+		</code>
+	</page>
+	<page>
+		<headline>Headline 3</headline>
+		<paragraph><bold><îtalic>What is XML?</îtalic></bold></paragraph>
+		<paragraph>So, what is XML? Whenever a group of people asks this question, I always look at the individuals’ body language. A significant portion of the group leans forward eagerly, wanting to learn more. The others either roll their eyes in anticipation of hype and half-formed theories, or cringe in fear of a long, dry history of markup languages. As a result, I’ve learned to keep my explanation brief.</paragraph>
+		
+		<source type="image" src="src/image/example.jpg" width="600" orientation="center" />
+	</page>
+</DOCUMENT>
