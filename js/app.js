@@ -33,7 +33,6 @@ $("#btnaddnewslide").on('click', function(){
 	sampleTR.find("#editor_").attr("id","editor_"+rowCount);
 	$(".folientabelle tbody").append(sampleTR);
 	initializeEditor("editor_"+rowCount);
-	$(".hiddentextareas").remove();
 	return false;
 });
 
@@ -56,4 +55,7 @@ $("form").on("submit", function () {
 	$("form .ql-editor").each(function() {
 		$("form").append('<textarea class="hiddentextareas" name="folieninhalt[]">'+$(this).html()+'</textarea>');
 	});
+	setTimeout(function(){
+		$(".hiddentextareas").remove();
+	}, 2000);
 });

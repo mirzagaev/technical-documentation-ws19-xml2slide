@@ -1,0 +1,12 @@
+.reveal .slides {
+  text-align: left;
+}
+.reveal .slides .ql-align-right {
+  text-align: right;
+}
+.reveal .slides .ql-align-center {
+  text-align: center;
+}
+.reveal .slides .ql-align-justify {
+  text-align: justify;
+}
