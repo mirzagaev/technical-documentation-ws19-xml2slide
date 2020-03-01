@@ -1,12 +1,16 @@
 <?php
+// erhält als GET-Parameter den Dokumentennamen
 $filename = $_GET["f"];
 $file = "xml/".$filename;
 
+// im Falle fehlender oder fehlerhaften XML-Datei folgt Error...
 $xml = simplexml_load_file($file) or die("Error: Cannot read file");
 
+// Auslesen der Inhalte aus XML-Attribute
 $document_bgColor = $xml['bgColor'];
 $document_type = $xml['type'];
 
+// Auslesen der Inhalte aus XML
 $document_title = $xml->titel;
 $document_author = $xml->author;
 $document_createdate = $xml->createdate;
@@ -17,6 +21,7 @@ $document_createdate = $xml->createdate;
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+		<!-- xml: Ausgabe des Titels der Präsentation -->
 		<title><? echo $document_title; ?></title>
 
 		<link rel="stylesheet" href="css/reset.css">
@@ -24,10 +29,10 @@ $document_createdate = $xml->createdate;
 		<link rel="stylesheet" href="css/theme/black.css">
 		<link rel="stylesheet" href="css/reveal-custom.css">
 
-		<!-- Theme used for syntax highlighting of code -->
+		<!-- reveal: Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="css/monokai.css">
 
-		<!-- Printing and PDF exports -->
+		<!-- reveal: Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
@@ -40,6 +45,7 @@ $document_createdate = $xml->createdate;
 		<div class="reveal">
 			<div class="slides">
 				<?php
+				// Schleife für den Page-Section und die Ausgabe des Inhalts
 				for ($i = 0; $i < count($xml->page); $i++) {
 					$page_bgColor = $xml->page[$i]['bgColor'];
 					$fragmentContent = $xml->page[$i]->content;
@@ -56,6 +62,7 @@ $document_createdate = $xml->createdate;
 
 		<script src="js/reveal.js"></script>
 		<script>
+			// REVEAL.js
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies

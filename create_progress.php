@@ -1,4 +1,5 @@
 <?php
+// IF-Bedingung, falls per POST-Methode was übergeben worden ist
 if (isset($_POST)) {
 	// Variablen definieren
 	$type = $_POST["type"];
